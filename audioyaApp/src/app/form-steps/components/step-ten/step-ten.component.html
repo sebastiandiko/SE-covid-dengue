@@ -1,0 +1,18 @@
+<h4>Audioprótesis visible</h4>
+<div class="row form-group">
+  <h5 class="card-title">"RETROAURICULAR"</h5>
+  <div class="col-md-6 col-md-offset-3">
+    <img src="../../../../assets/images/retroaricular.jpg" 
+    [class]="resumen.protesisSeleccionada === protesisEnum.RETROAURICULAR ? 'selected': ''" 
+    (click)="resumen.protesisSeleccionada = protesisEnum.RETROAURICULAR" class="img-responsive img-rounded"
+      alt="Retro Auricular">
+  </div>
+</div>
+<div class="row form-group">
+  <div class="px-6 pt-4 pb-2">
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Informe Final
+    </button>
+  </div>
+</div>
+ 

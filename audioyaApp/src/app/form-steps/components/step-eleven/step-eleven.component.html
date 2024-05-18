@@ -1,0 +1,17 @@
+<h4>AUDIOPRÓTESIS NO VISIBLE</h4>
+<div class="row form-group">
+  <h5 class="card-title">"INTRAURICULAR"</h5>
+  <div class="col-md-6 col-md-offset-3">
+    <img src="../../../../assets/images/intraauricular.jpg"
+    [class]="resumen.protesisSeleccionada === protesisEnum.INTRAURICULAR ? 'selected': ''" 
+    (click)="resumen.protesisSeleccionada = protesisEnum.INTRAURICULAR" class="img-responsive img-rounded"
+      alt="Intrauricular">
+  </div>
+</div>
+<div class="row form-group">
+  <div class="px-6 pt-4 pb-2">
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Informe Final
+    </button>
+  </div>
+</div> 

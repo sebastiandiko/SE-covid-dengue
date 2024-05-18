@@ -1,0 +1,17 @@
+<h4>MALFORMACIONES CONGÉNITAS</h4>
+<div class="row form-group">
+  <h5 class="card-title">"DIADEMAS VO"</h5>
+  <div class="col-md-6 col-md-offset-3 box-image">
+    <img src="../../../../assets/images/varillaosea.jpg" data-value="DIADEMAS VO"
+    [class]="resumen.protesisSeleccionada === protesisEnum.DIADEMASVO ? 'selected': ''"
+    (click)="resumen.protesisSeleccionada = protesisEnum.DIADEMASVO" class="img-responsive img-rounded" alt="Varilla Osea">
+  </div>
+</div>
+<div class="row form-group">
+  <div class="px-6 pt-4 pb-2">
+    <button type="button" [disabled]="disabled()" (click)="onNextStep()" class="btn btn-primary">
+      Informe Final
+    </button>
+  </div>
+</div>
+ 
