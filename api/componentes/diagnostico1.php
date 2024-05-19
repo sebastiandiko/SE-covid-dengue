@@ -19,15 +19,24 @@ if ($respuesta == "si"){
 </head>
 <body>
 <div class="container">
-        <?php
-            if ($nososp > $covid && $nososp > $dengue) {
-                echo "El paciente no es sospechoso.";
-            } elseif ($covid > $nososp && $covid > $dengue) {
-                echo "El paciente es sospechoso de tener COVID-19.";
-            } elseif ($dengue > $nososp && $dengue > $covid) {
-                echo "El paciente es sospechoso de tener dengue.";
-            }
-        ?>
+            <?php
+                if ($nososp > $covid && $nososp > $dengue) {
+                    $diagnosis = "El paciente no es sospechoso.";
+                    $imageURL = "../img/sano.png"; // URL de la imagen para el diagnóstico
+                } elseif ($covid > $nososp && $covid > $dengue) {
+                    $diagnosis = "El paciente es sospechoso de tener COVID-19.";
+                    $imageURL = "../img/covid.png"; // URL de la imagen para el diagnóstico
+                } elseif ($dengue > $nososp && $dengue > $covid) {
+                    $diagnosis = "El paciente es sospechoso de tener dengue.";
+                    $imageURL = "../img/dengue.jpg"; // URL de la imagen para el diagnóstico
+                }
+            
+                // Mostrar el diagnóstico y la imagen correspondiente
+                echo "<p>$diagnosis</p>";
+                if ($imageURL) {
+                    echo "<img src=\"$imageURL\" alt=\"Imagen de la enfermedad\">";
+                }
+            ?>
     </div>
 </body>
 </html>
