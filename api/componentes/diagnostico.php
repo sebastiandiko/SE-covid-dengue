@@ -36,7 +36,7 @@ if ($respuesta == "si"){
             // Mostrar el diagnóstico y la imagen correspondiente
             echo "<p>$diagnosis</p>";
             if ($imageURL) {
-                echo "<img src=\"$imageURL\" alt=\"Imagen de la enfermedad\">";
+                echo "<img class='imgs' src=\"$imageURL\" alt=\"Imagen de la enfermedad\">";
             }
             ?>
 </body>

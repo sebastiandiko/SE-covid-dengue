@@ -15,9 +15,10 @@ body, html {
 }
 
 
-.container img {
-    max-width: 100%;
-    height: auto;
+img {
+    width: 200px;  /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensure the images cover the given size without distortion */
     border-radius: 5px;
     margin-top: 20px;
 }
