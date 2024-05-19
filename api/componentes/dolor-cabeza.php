@@ -8,6 +8,7 @@ $respuesta = null;
 // Procesar el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $temperatura = floatval($_POST['temperatura']);
+    $paciente = htmlspecialchars($_POST['paciente']);
     // Lógica para determinar las variables
     if ($temperatura <= 36) {
         $nososp += 1;
@@ -28,9 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <h1>¿El paciente tiene dolor de cabeza o dolor en los ojos?</h1>
-        <a href="muscular.php?nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=si" class="button">Sí</a>
-        <a href="muscular.php?nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
+        <h1>¿<?php echo $paciente; ?> tiene dolor de cabeza o dolor en los ojos?</h1>
+        <a href="muscular.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=si" class="button">Sí</a>
+        <a href="muscular.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
     </div>
 </body>
 </html>

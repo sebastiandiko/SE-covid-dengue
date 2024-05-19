@@ -3,6 +3,7 @@ $nososp = isset($_GET['nososp']) ? intval($_GET['nososp']) : 0;
 $covid = isset($_GET['covid']) ? intval($_GET['covid']) : 0;
 $dengue = isset($_GET['dengue']) ? intval($_GET['dengue']) : 0;
 $respuesta = isset($_GET['respuesta']) ? $_GET['respuesta'] : 'none';
+$paciente = isset($_GET['paciente']) ? $_GET['paciente'] : 'none';
 
 if ($respuesta == "si"){
     $covid +=1;
@@ -22,9 +23,9 @@ if ($respuesta == "si"){
 </head>
 <body>
 <div class="container">
-        <h1>¿El paciente tiene dolor muscular?</h1>
-        <a href="vomito.php?nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=si" class="button">Sí</a>
-        <a href="vomito.php?nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
+        <h1>¿<?php echo $paciente; ?> tiene dolor muscular?</h1>
+        <a href="vomito.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=si" class="button">Sí</a>
+        <a href="vomito.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
     </div>
 </body>
 </html>
