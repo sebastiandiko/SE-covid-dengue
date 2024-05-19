@@ -38,6 +38,8 @@ if ($respuesta == "si"){
                     echo "<img src=\"$imageURL\" alt=\"Imagen de la enfermedad\">";
                 }
             ?>
+            <p></p>
+            <a href="../index.php" class="button">Comenzar de nuevo</a>
     </div>
 </body>
 </html>
