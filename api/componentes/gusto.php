@@ -22,7 +22,7 @@ if ($respuesta == "no"){
 <div class="container">
         <h1>¿<?php echo $paciente; ?> padece de pérdida de olfato o gusto?</h1>
         <a href="tos.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=si" class="button">Sí</a>
-        <a href="erupciones.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
+        <a href="hemorrageas.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
     </div>
 </body>
 </html>

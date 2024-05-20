@@ -22,7 +22,7 @@ if ($respuesta == "si"){
 </head>
 <body>
 <div class="container">
-        <h1>¿<?php echo $paciente; ?> tiene hermorrágeas?</h1>
+        <h1>¿<?php echo $paciente; ?> tiene hermorrágias?</h1>
         <a href="diagnostico.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=si" class="button">Sí</a>
         <a href="diagnostico.php?paciente=<?php echo $paciente;?>&nososp=<?php echo $nososp;?>&covid=<?php echo $covid;?>&dengue=<?php echo $dengue;?>&respuesta=no" class="button">No</a>
     </div>
