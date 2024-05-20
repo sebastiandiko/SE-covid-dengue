@@ -30,6 +30,9 @@ if ($respuesta == "si"){
                 } elseif ($dengue > $nososp && $dengue > $covid) {
                     $diagnosis = $paciente ." es sospechoso de tener dengue.";
                     $imageURL = "../img/dengue.jpg"; // URL de la imagen para el diagnóstico
+                }else{
+                    $diagnosis = "Es posible que el paciente solo tenga gripe o infección leve, será necesario realizar estudios para tener un correcto diagnóstico";
+                    $imageURL = "../img/febril.png"; // URL de la imagen para el diagnóstico
                 }
             
                 // Mostrar el diagnóstico y la imagen correspondiente
