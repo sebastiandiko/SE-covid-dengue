@@ -12,9 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lógica para determinar las variables
     if ($temperatura <= 36) {
         $nososp += 1;
-    } else {
+    } elseif($temperatura >= 37 && $temperatura < 40){
         $covid += 1;
-        $dengue += 1;
+    }else{
+        $dengue +=1;
     }
 }
 ?>
